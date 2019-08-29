@@ -1,0 +1,199 @@
+@media (max-width: 575.98px) {
+  .display-1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.0;
+  }
+  
+      .display-2 {
+          font-size: 2.75rem;
+          font-weight: 300;
+          line-height: 1.0;
+      }
+  
+      .display-3 {
+          font-size: 2.25rem;
+          font-weight: 300;
+          line-height: 1.0;
+      }
+  
+      .display-4 {
+          font-size: 1.75rem;
+          font-weight: 300;
+          line-height: 1.0;
+      }
+  }
+
+
+/*----------------- GENERAL ----------------- */
+/* 
+  html,
+  body,
+  header,
+  .view {
+    height: 100%;
+  }
+
+  @media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+      height: 100vh;
+    }
+  }  */
+
+  h1,h2,h3,h4,h5{
+    color: #BF4539;
+  }
+
+  a:hover, a:focus {
+    color: #BF4539 !important;
+  }
+
+/*----------------- HEADER -----------------*/
+
+#navPrincipal{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.top-nav-collapse {
+    background-color:#0D1440 !important;
+
+}
+
+#navPrincipal:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  #navPrincipal:not(.top-nav-collapse) {
+        background:#0D1440 !important;
+    }
+}
+
+.navbar .dropdown-menu a {
+  color:#fff;
+}
+
+.dropdown-menu {
+  background-color: #0D1440;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: #0B1129;
+}
+
+.header-pic{
+  height: 25rem;
+  border: none;
+  background: linear-gradient(rgba(0,0,0,.8),rgba(0, 0, 0, 0.185)), url('https://source.unsplash.com/random');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.affix {
+  top: 20px;
+}
+
+.text-bg-blue {
+  background-color: #0D1440;
+}
+
+body {
+  position: relative;
+}
+
+.conteudo, .lateral {
+  background-color: white;
+  margin-top: -95px;
+}
+
+.sticky-top-offset{
+  top: 95px;
+}
+
+#video-box {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+  
+header #video-box video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+  
+header .container {
+  position: relative;
+  z-index: 2;
+}
+  
+#video-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #BF4539;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header > #video-box {
+    background: url('../img/T--Sao_Carlos-Brazil--HomeYeast.png') black no-repeat center center;
+  }
+  header #video-box video {
+    display: none;
+  }
+}
+
+#titulo-interno {
+}
+  /*----------------- FOOTER -----------------*/
+
+  .bg-footer {
+    background-color: #0D1440; 
+  }
+
+  footer hr{
+    background-color: rgba(25, 33, 90, 0.979); 
+  }
+
+  footer {
+    color: white;
+  }
+
+  footer a{
+    color: white;
+  }
+
+  #footer-logo-max {
+    max-width:120px;
+    width:100%;
+  }
+
+  #footer-copyrights{
+    background-color: #0B1129;
+    color: #ADADAD;
+  }
+
+  
