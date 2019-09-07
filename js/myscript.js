@@ -1,7 +1,4 @@
 AOS.init();
-  
-  
-  
   //Navbar Scrolling
 (function ($) {
   var SCROLLING_NAVBAR_OFFSET_TOP = 50;
@@ -18,8 +15,8 @@ AOS.init();
   });
 })(jQuery);
 
+// Smooth Scrolling
 $(document).ready(function(){
- // Smooth Scrolling
  $('#scrollspy-menu a').on('click', function(event) {
    if (this.hash !== '') {
      event.preventDefault();
@@ -33,5 +30,19 @@ $(document).ready(function(){
      );
    }
  });
+
+ $('.scrolldown a').on('click', function(event) {
+  if (this.hash !== '') {
+    event.preventDefault();
+    const hash = this.hash;
+    $('html, body').animate(
+      {scrollTop: $(hash).offset().top
+      },800,
+      function() {
+        window.location.hash = hash;
+      }
+    );
+  }
+});
 
 });

@@ -40,6 +40,28 @@ body {
   font-family: 'Fira Sans', sans-serif !important;
 }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  50% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  50% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
 #body-interno {
   position: relative;
 }
@@ -59,9 +81,21 @@ h1,h2,h3,h4,h5{
 
 footer a:hover,
 .conteudo-interno a:hover,
-.home-conteudo a:hover
+#home-conteudo a:hover
 {
   color: #BF4539;
+}
+
+.text-bg-blue {
+  background-color: #0D1440;
+}
+
+.text-blue {
+  color: #0D1440;
+}
+
+.text-orange {
+  color: #BF4539 !important;
 }
 
 @media (max-width: 575.98px) {
@@ -91,14 +125,8 @@ footer a:hover,
 }
 
 /* ============================================================================================== 
-SED Innovations
-https://sed.am
-https://mkrtchyan.ga
+SED Innovations https://sed.am https://mkrtchyan.ga -----------------STARS-------------------
 ================================================================================================= */
-/* * {
-  margin: 0;
-  padding: 0;
-} */
 
 @keyframes move-twink-back {
   from {background-position:0 0;}
@@ -177,10 +205,6 @@ animation:move-clouds-back 200s linear infinite;
 }
 
 /* ============================================================================================== 
-
-================================================================================================= */
-
-/* ============================================================================================== 
 ---------------------------------------- HEADER -----------------------------------------
 ================================================================================================= */
 
@@ -202,10 +226,10 @@ animation:move-clouds-back 200s linear infinite;
       padding-bottom: 5px; }
 }
 
+
 #navPrincipal .nav-link {
   color: #fff;
 }
-
 
 #navPrincipal{
     box-shadow: none !important;
@@ -234,10 +258,8 @@ animation:move-clouds-back 200s linear infinite;
   background-color: #0D1440;
 }
 
-#navPrincipal .dropdown-item:focus,
 #navPrincipal .dropdown-item:hover,
-#navPrincipal .nav-link:hover,
-#navPrincipal .nav-link:focus{
+#navPrincipal .nav-link:hover{
   color: #BF4539 !important;
   background-color: #0B1129;
 }
@@ -251,11 +273,33 @@ animation:move-clouds-back 200s linear infinite;
   font-weight: 500 !important;
 }
 
+@media (max-width: 992px){
+  #body-interno{
+    margin-top:1rem;
+  }
+}
+
 /* --------------------- header ------------------------- */
 
-.scrolldown i {
+.scrolldown a{
+  color:#BF4539;
+}
+
+.scrolldown a:hover{
+  color: #0D1440 !important;
+}
+
+.scrolldown i{
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 15%;
+  font-size: 3rem;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
+  margin-left: -1rem;
 }
 
 .header-pic{
@@ -266,43 +310,6 @@ animation:move-clouds-back 200s linear infinite;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.text-bg-blue {
-  background-color: #0D1440;
-}
-
-.lateral-menu-container {
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-}
-
-#scrollspy-menu {
-  background-color: #fff;
-  /* background-color: rgba(0, 0, 0, 0.322); */
-  overflow-y: auto;
-  max-height: calc(100vh - 105px);
-}
-
-.scroollpy-offset::before{
-  display: block;
-  content: ' ';
-  margin-top: -105px;
-  height: 105px;
-  visibility: hidden;
-}
-
-.conteudo-interno {
-  background-color: #fff; 
-}
-
-.conteudo-interno, .lateral-menu-container {
-  margin-top: -95px;
-}
-
-.sticky-top-offset{
-  top: 95px;
 }
 
 #video-box {
@@ -340,28 +347,66 @@ header .container {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #BF4539;
-  opacity: 0.4;
+  background-color: #0D1440;
+  opacity: 0.6;
   z-index: 1;
 }
 
 @media (pointer: coarse) and (hover: none) {
   header > #video-box {
     background: url('../img/T--Sao_Carlos-Brazil--HomeYeast.png') black no-repeat center center;
+    background-size: cover;
   }
   header #video-box video {
     display: none;
   }
 }
 
-  /*----------------- FOOTER -----------------*/
+/* ============================================================================================== 
+---------------------------------------- CONTENT -----------------------------------------
+================================================================================================= */
 
-  footer a:hover, footer a:focus {
+.lateral-menu-container {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+#scrollspy-menu {
+  background-color: #fff;
+  /* background-color: rgba(0, 0, 0, 0.322); */
+  overflow-y: auto;
+  max-height: calc(100vh - 105px);
+}
+
+.scroollpy-offset::before{
+  display: block;
+  content: ' ';
+  margin-top: -105px;
+  height: 105px;
+  visibility: hidden;
+}
+
+.conteudo-interno {
+  background-color: #fff; 
+}
+
+.conteudo-interno, .lateral-menu-container {
+  margin-top: -95px;
+}
+
+.sticky-top-offset{
+  top: 95px;
+}
+
+
+
+/* ============================================================================================== 
+---------------------------------------- FOOTER -----------------------------------------
+================================================================================================= */
+
+  footer a:hover{
     text-decoration: underline;
-  }
-
-  .bg-footer {
-    background-color: #0D1440; 
   }
 
   footer hr{
